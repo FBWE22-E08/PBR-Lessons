@@ -69,6 +69,7 @@ class MusicPlayer {
       const sumTotalMinutes = this.songQueue.map(song => Number(song.totalMinutes)).reduce((acc, curr) => acc + curr,0);
 
       //without mapping function example
+                                                                                  //using curr.totalMinutes from object   
       const sumTotalMinutesAlternative = this.songQueue.reduce((acc, curr) => acc + curr.totalMinutes,0)
       console.log("alternative :",sumTotalMinutesAlternative)
 
