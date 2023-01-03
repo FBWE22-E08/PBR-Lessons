@@ -40,7 +40,7 @@ greetMessage('John');
 
 greetUsers(['John','Doe','apple'] , greetMessage );
 
-//['John','Doe','apple','sima'].forEach(apple =>  greetMessage(apple) )
+//['John','Doe','apple','sima'].forEach(anyName =>  greetMessage(anyName) )
 
 
 //==========================================================
