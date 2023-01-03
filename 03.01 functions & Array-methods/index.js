@@ -56,7 +56,7 @@ myArr.join('') //'12345' the opposite of .split() which turns a string into an a
 
 //returns a boolean
 
-myArr.includes(31)// returns false
+myArr.includes(31)// returns false // works on strings too
 myArr.some(item => item < 2 ) // returns true
 myArr.every(item => item < 2 ) //returns false
 
