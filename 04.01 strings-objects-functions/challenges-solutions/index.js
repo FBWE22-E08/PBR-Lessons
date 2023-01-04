@@ -178,7 +178,7 @@ function longestWord(sen) {
 }
 
 console.log(longestWord("Hi there, my name is Brad")); // === 'there,'
-console.log(longestWord(["My name is Brad"])); // === ['name', 'brad']
+console.log(longestWord("My name is Brad")); // === ['name', 'brad']
 console.log(longestWord("Brad")); // == 'brad'
 
 // CHALLENGE 8: ARRAY CHUNKING
