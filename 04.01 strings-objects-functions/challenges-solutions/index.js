@@ -122,6 +122,9 @@ console.log(maxCharacter("javascriptzzzz"));
 // myObj['age']
 // myObj.age
 
+// myObj.address.city
+
+
 // CHALLENGE 6: FIZZBUZZ
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 const fizzBuzz = () => {
@@ -223,10 +226,12 @@ function chunkArray(arr, len) {
 
 console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3)); // === [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7 ] ]
 console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 2)); // === [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7 ] ]
+
+
 // CHALLENGE 9: FLATTEN ARRAY
 function flattenArray(arrays) {
   // SOLUTION 1
-  return arrays.reduce((a, b) => a.concat(b));
+  return arrays.reduce((a, b) => a.concat(b) ,[]);
   // SOLUTION 2
   // return [].concat.apply([], arrays);
   // SOLUTION 3
@@ -238,9 +243,10 @@ function flattenArray(arrays) {
 console.log(flattenArray([[1, 2], [3, 4], [5, 6], [7]])); // === [1, 2, 3, 4,5, 6, 7]
 
 // CHALLENGE 10: ANAGRAM
+//              "elbow", "below"
 function isAnagram(str1, str2) {
-  const arr1 = str1.split("").sort();
-  const arr2 = str2.split("").sort();
+  const arr1 = str1.split("").sort(); // ["b","e","l","o","w"]
+  const arr2 = str2.split("").sort(); // ["b","e","l","o","w"]
   return arr1.every((value, index) => value === arr2[index]);
 }
 console.log(isAnagram("elbow", "below")); // ==== true
@@ -248,7 +254,7 @@ console.log(isAnagram("Dormitory", "dirty room##")); //  === false
 
 // CHALLENGE 11: ADD ALL NUMBERS
 function addAll(...numbers) {
-  return numbers.reduce((acc, cur) => acc + cur);
+  return numbers.reduce((acc, cur) => acc + cur , 0);
 }
 console.log(addAll(2, 5, 6, 7)); // === 20;
 
@@ -276,9 +282,9 @@ function sumAllPrimes(num) {
 console.log(sumAllPrimes(10)); // === 17;
 
 // CHALLENGE 13: SEEK AND DESTROY
-
+//               arr = [2, 3, 4, 6, 6, "hello"], rest = [2,6]
 function seekAndDestroy(arr, ...rest) {
-  return arr.filter((val) => !rest.includes(val));
+  return arr.filter((val) => !rest.includes(val)); // [3,4, 'hello']
 }
 
 console.log(seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6)); // === [3,4, 'hello']
@@ -288,7 +294,7 @@ console.log(seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6)); // === [3,4, 'hello
 function evenOddSums(arr) {
   let evenSum = 0;
   let oddSum = 0;
-
+  //         ternaryOp:  condition ? truthy : falsy
   arr.forEach((num) => (num % 2 === 0 ? (evenSum += num) : (oddSum += num)));
 
   return [evenSum, oddSum];
@@ -296,4 +302,4 @@ function evenOddSums(arr) {
 
 console.log(evenOddSums([50, 60, 60, 45, 71])); // === [170,116]
 
-// myObj.address.city
+
