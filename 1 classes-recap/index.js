@@ -90,6 +90,10 @@ class MusicPlayer {
 
       return sumTotalMinutes;
    }
+
+   getListOfItems(){
+     return this.songQueue.forEach((element) => console.log(`${element}`));
+   }
 }
 
 //initialize one song example: 
@@ -124,3 +128,5 @@ mp2.addToQueue(new Song("Blinding Lights", "The Weeknd",3));
 
 //Get total minutes in queue
 console.log("Total minutes in queue: ", mp2.getTotalMinutesInQueue());
+
+mp2.getListOfItems();
