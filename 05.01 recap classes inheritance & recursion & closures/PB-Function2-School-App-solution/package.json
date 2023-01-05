@@ -1,0 +1,25 @@
+{
+  "name": "PB-Function2-School-App",
+  "version": "1.0.0",
+  "description": "* create app to add, remove, read and edit Students and Classes in a School",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigitalCareerInstitute/PB-Function2-School-App/issues"
+  },
+  "homepage": "https://github.com/DigitalCareerInstitute/PB-Function2-School-App#readme",
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "rewire": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DigitalCareerInstitute/PB-Function2-School-App",
+    "id": 340387271
+  }
+}
